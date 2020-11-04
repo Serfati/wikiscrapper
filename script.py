@@ -21,11 +21,9 @@ headers = [header.get_text().strip() for header in headers.find_all('th')]
 table = [[cell.get_text().strip() for cell in row.find_all('td')]
          for row in rows]
 
-
-for i, v in enumerate(table):
-    if not v[0].isdigit() and v[0] != 'TBA':
+for i, actor in enumerate(table):
+    if not actor[0].isdigit() and actor[0] != 'TBA':
         table[i].insert(0, table[i-1][0])
-
 
 df = pd.DataFrame(data=table, columns=headers)
 df = df.drop(['Notes'], axis=1)
@@ -91,32 +89,30 @@ for url in films_urls:
     # if len(actors_table) > 8:
     #     break
 
-
-for i, v in enumerate(actors_table):
-    name, url = v
+for actor in actors_table:
+    name, url = actor
     info_box = ''
     try:
         wiki = parse(name)
-        info_box = wiki.filter_templates(matches="Infobox person")[0]
-        v.append(
+        info_box = wiki.filter_templates(matches="Infobox")[0]
+        actor.append(
             int(''.join(info_box.get('birth_date').value.filter_templates()[0].get(1))))
     except:
-        v.append(-1)
+        actor.append(-1)
     try:
         country_raw = info_box.get('birth_place').value
         j = country_raw.rfind(']')
         d = ",!?/&-:;@'<>{}"
         country_raw = re.split("["+"\\".join(d)+"]", country_raw[j+2:])
-        country_raw = [
+        country = [
             'U.S.', country_raw[0].strip()][country_raw[0].strip() != '']
-        v.append(country_raw)
+        actor.append(country)
     except:
-        v.append('U.S.')
+        actor.append('U.S.')
     try:
-        v.append(find_number_of_awards(url))
+        actor.append(find_number_of_awards(url))
     except:
-        v.append(0)
-        pass
+        actor.append(0)
 
 headers = ['Name', 'url', 'Year of Birth', 'Country of Birth', 'No. of Awards']
 df = pd.DataFrame(data=actors_table, columns=headers)
