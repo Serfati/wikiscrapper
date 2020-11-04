@@ -32,8 +32,16 @@ You can modify or contribute to this project by following the steps below:
  # Navigate to the directory 
  $> cd wikiscrapper
   ``` 
- 
-**2. launch of the project**  
+
+
+**2. Install dependencies** 
+
+ ```bash  
+ # pip
+ $> pip install -r requirements.txt
+ ```  
+
+**3. Launch of the project**  
   
  ```bash  
  # run 
