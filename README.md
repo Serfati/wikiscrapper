@@ -48,7 +48,7 @@ You can modify or contribute to this project by following the steps below:
  $> python script.py
  ```  
 
-## Dependencies and Main Packages
+## :wrench: Dependencies and Main Packages
 
 - `urllib` -  HTTP client for Python
 - `BeautifulSoup` - scrape information from web pages.
@@ -57,7 +57,7 @@ You can modify or contribute to this project by following the steps below:
 - `seaborn` - statistical data visualization
 - `re` - A back-pocket regex cookbook
 
-## Screenshots
+## :camera: Screenshots
 
 * All films by Gal Gadot sorted by `Year` column
 <img src="https://res.cloudinary.com/serfati/image/upload/v1604487779/screely-1604487740256_exdwnn.png" height="300px"/>
@@ -69,7 +69,7 @@ You can modify or contribute to this project by following the steps below:
 <img src="https://res.cloudinary.com/serfati/image/upload/v1604489061/screely-1604489046599_dgrxnv.png" height="300px"/>
 
 
-## Team Members:
+## :busts_in_silhouette: Team Members:
 
 | Name             | Username                                    | Contact Info              | 
 | ---------------- | ------------------------------------------- | ------------------------- | 
