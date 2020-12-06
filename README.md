@@ -69,13 +69,6 @@ You can modify or contribute to this project by following the steps below:
 <img src="https://res.cloudinary.com/serfati/image/upload/v1604489061/screely-1604489046599_dgrxnv.png" height="300px"/>
 
 
-## :busts_in_silhouette: Team Members:
-
-| Name             | Username                                    | Contact Info              | 
-| ---------------- | ------------------------------------------- | ------------------------- | 
-| _Dvir Simhon_    | [dvirsimhon](https://github.com/dvirsimhon) | dvirsim@post.bgu.ac.il    |  
-| _Avihai Serfati_ | [serfati](https://github.com/serfati)       | serfata@post.bgu.ac.il    | 
-
 ## ⚖️ License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
